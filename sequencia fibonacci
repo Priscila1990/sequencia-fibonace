@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+public class FibonacciCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Informe um número para verificar se está na sequência de Fibonacci: ");
+        int numero = scanner.nextInt();
+
+        if (isFibonacci(numero)) {
+            System.out.println("O número " + numero + " pertence à sequência de Fibonacci.");
+        } else {
+            System.out.println("O número " + numero + " não pertence à sequência de Fibonacci.");
+        }
+    }
+
+    private static boolean isFibonacci(int n) {
+        int a = 0, b = 1;
+        while (a < n) {
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+        return a == n;
+    }
+}
+import java.util.Scanner;
+
+public class CountLetterA {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Informe uma string para contar a letra 'a': ");
+        String texto = scanner.nextLine();
+
+        int quantidade = contarLetraA(texto);
+        System.out.println("A letra 'a' aparece " + quantidade + " vezes na string.");
+    }
+
+    private static int contarLetraA(String texto) {
+        int count = 0;
+        for (char c : texto.toLowerCase().toCharArray()) {
+            if (c == 'a') {
+                count++;
+            }
+        }
+        return count;
+    }
+}
+public class CalculoSoma {
+    public static void main(String[] args) {
+        int INDICE = 12;
+        int SOMA = 0;
+        int K = 1;
+
+        while (K < INDICE) {
+            K = K + 1;
+            SOMA = SOMA + K;
+        }
+
+        System.out.println("O valor de SOMA é: " + SOMA);
+    }
+}
+public class SequenciaA {
+    public static void main(String[] args) {
+        int next = 7 + 2; // próximo número ímpar
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class SequenciaB {
+    public static void main(String[] args) {
+        int next = 64 * 2; // próximo número como potência de 2
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class SequenciaC {
+    public static void main(String[] args) {
+        int next = 6 * 6; // próximo número como quadrado de 6
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class SequenciaD {
+    public static void main(String[] args) {
+        int next = 10 * 10; // próximo número como quadrado de 10
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class SequenciaE {
+    public static void main(String[] args) {
+        int a = 5, b = 8;
+        int next = a + b; // próximo número na sequência de Fibonacci
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class SequenciaF {
+    public static void main(String[] args) {
+        int next = 19 + 1; // próximo número, seguindo padrão da sequência
+        System.out.println("Próximo número: " + next);
+    }
+}
+public class IdentificarInterruptores {
+    public static void main(String[] args) {
+        // Descreva o procedimento em comentários
+        System.out.println("1. Ligue o primeiro interruptor e deixe-o ligado por um tempo.");
+        System.out.println("2. Desligue o primeiro interruptor e ligue o segundo interruptor.");
+        System.out.println("3. Vá até as lâmpadas:");
+        System.out.println("   - A lâmpada que está acesa é controlada pelo segundo interruptor.");
+        System.out.println("   - A lâmpada que está apagada e quente é controlada pelo primeiro interruptor.");
+        System.out.println("   - A lâmpada que está apagada e fria é controlada pelo terceiro interruptor.");
+    }
+}
